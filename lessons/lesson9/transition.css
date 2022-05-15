@@ -37,7 +37,7 @@
 
 .container .card .part_form.part1 .content{
     opacity: 0.5;
-    transition: 1s;
+    transition: 3s;
 }
 
 .container .card:hover .part_form.part1 .content{
