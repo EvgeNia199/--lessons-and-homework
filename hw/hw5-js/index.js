@@ -72,9 +72,11 @@ task1();
 function task3(lim1, lim2){
     const res = 1;
     for(num = lim1; num <= lim2; num++){
-       res = res * num; 
+       res *= num; 
        console.log(res);
     }
 }
 a = task3(5, 10);
 console.log(a)
+
+
