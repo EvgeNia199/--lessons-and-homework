@@ -216,3 +216,4 @@ console.log(objBuy);
 objBuy.setSum(100);
 objBuy.addSale();
 console.log(objBuy);
+
