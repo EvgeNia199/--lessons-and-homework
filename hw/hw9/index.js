@@ -19,14 +19,14 @@ class Workers {
         this.salary = salary;
         this._id = 0;
         Workers.countWorkers ++;
-        Workers.totalYearSalary += salary*12;
+        Workers.totalYearSalary = 0;
         
     }
     monthSalary(){
         console.log('Зарплата за месяц ' + this.name, this.salary );
     }
     yearSalary(){
-        console.log(this.name, this.salary * 12);
+        this.totalYearSalary = this.salary * 12;
     }    
 
     totalYearSalary(){
@@ -53,8 +53,8 @@ console.log('calculate how much money was paid to all employees for the year ' +
 
 class Pluralist extends Workers {
     static countPluralist = 0;
-    constructor(watch, rate){
-    super();
+    constructor(name, category, 0, watch, rate){
+    super(name, category, 0);
         this.watch = watch;
         this.rate = rate;
         Pluralist.countPluralist ++;
@@ -69,8 +69,7 @@ class Pluralist extends Workers {
 
 }
 
-
-const pluralist1 = new Pluralist(8, 500);
+const pluralist1 = new Pluralist(8, 500,);
 console.log('Количество денег что зарабатывает за день');
 pluralist1.daySalary();
 console.log('Зарплата за меняц ');
