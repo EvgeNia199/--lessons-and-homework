@@ -32,8 +32,24 @@ for(let i=0; i<arrayItems.length; i++){
 //2* выделите каждый элемент списка случайным цветом поменяв ему цвет текста или фон
 
 const list = document.createElement('ul');
-const el = document.getElementById('container');
-el.appendChild('ul')
-// const arrayList  = [
-//     document.createElement
-// ]
+container.appendChild(list)
+const arrayList  = [
+    document.createElement('li'),
+    document.createElement('li'),
+    document.createElement('li'),
+    document.createElement('li'),
+    document.createElement('li'),
+];
+
+for(let i=0; i<arrayList.length; i++){
+    container.appendChild(arrayList[i]);
+    arrayList[i].innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iure.';
+    setRandomColor(arrayList[i])
+}
+
+function setRandomColor(element){
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    element.style.color = randomColor;
+}
+
+document.querySelector('li')
