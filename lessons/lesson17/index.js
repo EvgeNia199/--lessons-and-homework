@@ -321,3 +321,71 @@ function f(value){
         throw new Error('Wrong value');
     }
 }
+
+
+/* Задание. Автор и его работы 
+класс Автор (внутри) работы name author
+метод добавления новой работы (id, name, date)
+*метод удаления работы по id
+сколько работ у Автора
+сколько всего авторов в базе  */
+
+
+class Author{
+    static countAuthors = 0;
+
+    constructor(name){
+        this.name = name;
+        this.books = [];  // [{}, {}, {}, {}, {} ]
+        this._id = 0;
+        Author.countAuthors ++;
+    }
+    addBook(name, year){
+        this._id += 1;
+        const newBook = {
+            id: this._id,
+            name: name,
+            year: year
+        };
+        this.books.push(newBook);
+    }
+    getCountBooks(){
+        return this.books.length;
+    }
+    outBooksForAuthor(){
+        console.log(this.books);
+    }
+    
+}
+
+let author1 = new Author('Vasya');
+author1.addBook('name1', 2020);
+author1.addBook('name2', 2021);
+author1.addBook('name3', 2022);
+author1.addBook('name4', 2022);
+
+console.group('author 1');
+console.log("count author's books = ",author1.getCountBooks());
+console.log('count authors in DB = ', Author.countAuthors);
+author1.outBooksForAuthor();
+console.groupEnd();
+
+let author2 = new Author('Joht Smith');
+author2.addBook('funny', 2020);
+author2.addBook('fox', 2021);
+
+console.group('author 2')
+console.log("count author's books = ",author2.getCountBooks());
+console.log('count authors in DB = ', Author.countAuthors);
+author2.outBooksForAuthor();
+console.groupEnd();
+
+let author3 = new Author('Tom Fox');
+author3.addBook('hello js', 2019);
+author3.addBook('java script', 2022);
+
+console.group('authors 3')
+console.log("count author's books = ",author3.getCountBooks());
+console.log('count authors in DB = ', Author.countAuthors);
+author3.outBooksForAuthor();
+console.groupEnd();

@@ -21,7 +21,7 @@ class Workers {
     console.log("Зарплата за месяц " + this.name, this.salary);
   }
   yearSalary() {
-    this.totalYearSalary = this.salary * 12;
+     console.log(this.salary * 12); 
   }
 }
 
@@ -35,10 +35,7 @@ worker1.yearSalary();
 
 console.log("count workers in DB " + Workers.countWorkers);
 
-console.log(
-  "calculate how much money was paid to all employees for the year " +
-    Workers.totalYearSalary
-);
+
 
 // Создайте класс Совместитель, который наследует Работника. У него есть дополнительные свойства - количество отработанных часов в день, ставка за час. создайте методы:
 // - подсчитайте количество денег что зарабатывает за день
@@ -56,7 +53,7 @@ class Pluralist extends Workers {
   daySalary() {
     this.daySalaryPlur = this.watch * this.rate;
   }
-  monthSalary(day) {
+  monthSalary() {
     this.salary = this.daySalaryPlur * 30;
   }
 }
@@ -65,6 +62,6 @@ const pluralist1 = new Pluralist(8, 500);
 console.log("Количество денег что зарабатывает за день");
 pluralist1.daySalary();
 console.log("Зарплата за меняц ");
-pluralist1.monthSalary(20);
+pluralist1.monthSalary();
 console.log("Количество совместителей");
 console.log(Pluralist.countPluralist);

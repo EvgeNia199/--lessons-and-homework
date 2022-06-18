@@ -79,3 +79,20 @@ divContElem.append(pElem);
 testDiv.className = 'test';
 testP.className = 'test-para';
 testP.innerText = '****************'
+
+
+
+
+
+// arrayItems.forEach((element,i) => {
+//     console.log(element);
+//     console.log(i);
+//     container.appendChild(element);
+
+//     if(highlightedTextIndexes.includes(i)){
+//         element.innerText = 'highlightedText';
+//         element.style.color = 'red'
+//     }else {
+//         element.innerText = 'simpleText';
+//     }
+// })
