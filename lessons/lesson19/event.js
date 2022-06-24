@@ -13,7 +13,7 @@ let isHello = true;
 
 // btn.onclick = function(){console.log('Hello!!');} старый способ
 
-btn.addEventListener('click', fun1);
+btn.addEventListener('click', fun1); // cлушатель событие, функция
 
 
 function fun1(){
@@ -57,3 +57,4 @@ function getColor(arr){
     console.log(arr.length);
     return color;
 }
+
