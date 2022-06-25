@@ -16,7 +16,7 @@ body{
 }
 
 .slider{
-    width: 800px;
+    width: 1000px;
     height: 350px;
     display: flex;
     justify-content: space-between;
@@ -67,6 +67,7 @@ body{
     display: flex;
     align-items: flex-end;
     padding: 10px 0;
+    transition: 0.5s;
 
 }
 
@@ -82,13 +83,16 @@ body{
     padding: 0 10px;
 }
 
-.sliderItem.active .itemDesc{
-    align-items: flex-start;
-}
+/* .sliderItem.active .itemDesc{
+    /* align-items: flex-start; 
+} */
 
 .sliderItem .itemDesc .country{
     width: 40px;
     margin-right: 20px;
+    transition: 0.5s;
+    box-shadow: 0 0 14px;
+    border-radius: 50%;
   
 }
 
@@ -99,9 +103,13 @@ box-shadow: inset 0px -100px 100px rgb(0, 0, 60%),
 inset 0px -100px 100px rgb(0, 0, 60%) ;
 }
 
-p {
+
+ p {
     color: white;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+   
+   
 }
+
