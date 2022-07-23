@@ -3,14 +3,11 @@
 
 import { Component, Fragment } from 'react';
 import './App.css';
+
 import TimerInc from './Components/TimerInc';
 
 
-const testUser = {
-  id: 1,
-  name: 'John',
-  surname: 'Smith'
-};
+
 export default class App extends Component{
   constructor(props){
     super(props);
@@ -20,7 +17,7 @@ export default class App extends Component{
     return(
       <>
 
-        <TimerInc stopValue={15}/>
+        <TimerInc stopValue={10}/>
         
      </> 
     )
