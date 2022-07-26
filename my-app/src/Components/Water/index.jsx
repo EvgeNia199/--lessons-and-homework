@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './Water.module.css';
+import styles from './Water.module.scss';
 
 // rfc создать функцию
 // rcc создать класс
