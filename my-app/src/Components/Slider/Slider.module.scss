@@ -1,10 +1,8 @@
+
 @import './../../settings/commonStyles.scss';
 
-
-.container{
-    @extend %flex-center;
-    margin: 0 auto;
-    min-width: 576px;
-    max-width: 1200px;
-    flex-direction: column;
+.mainContainer{
+  @extend %flex-center;
+  margin: 0 auto;
+  flex-direction: column;
 }

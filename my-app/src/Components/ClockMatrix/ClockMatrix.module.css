@@ -1,0 +1,32 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 600px;
+  background-color: green;
+  border: 2px solid black;
+}
+
+.time {
+  font-size: 40px;
+  color: black;
+  font-size: bold;
+}
+
+.btn {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+/*# sourceMappingURL=ClockMatrix.module.css.map */
