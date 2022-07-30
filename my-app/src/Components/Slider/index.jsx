@@ -32,7 +32,7 @@ export default function Slider() {
   return (
     <div className={styles.mainContainer}>
       <Slide images={images} currentImgId={currentImgId} />
-      {/* <Slide currentImg={images[currentImgId].image}/> */}
+      
       <Controller setPrevSlide={setPrevSlide} setNextSlide={setNextSlide} />
     </div>
   );
