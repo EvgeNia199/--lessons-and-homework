@@ -1,7 +1,3 @@
-.colorStop {
+.colorDiv > span{
     color: red;
-}
-
-.colorStart{
-    color: black;
 }

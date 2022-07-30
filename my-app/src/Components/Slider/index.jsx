@@ -21,14 +21,18 @@ export default function Slider() {
       ? setCurrentImgId(images.length - 1)
       : setCurrentImgId(currentImgId - 1);
   };
+
+
   const setNextSlide = () => {
-    currentImgId == images.length - 1
-      ? setCurrentImgId(0)
-      : setCurrentImgId(currentImgId + 1);
-  };
+    setCurrentImgId(currentImgId => {
+      const next = currentImgId === images.length - 1 ? 0 : currentImgId + 1
+      return next
+  })};
+
   return (
     <div className={styles.mainContainer}>
       <Slide images={images} currentImgId={currentImgId} />
+      {/* <Slide currentImg={images[currentImgId].image}/> */}
       <Controller setPrevSlide={setPrevSlide} setNextSlide={setNextSlide} />
     </div>
   );
