@@ -16,7 +16,9 @@ export default function Slide(props) {
     <>
       <div className={styles.containerImg}>
         <FullScreen handle={handle}>
-         
+          {/* <div className={styles.activ}>
+          <img src={images[currentImgId].image} alt="img" />
+          </div> */}
 
           {images.map((slide, index) => {
             return (

@@ -2,6 +2,7 @@
 import { Component, Fragment } from 'react';
 
 import ManagedContest from './Components/ManagedContest';
+import RandomUser from './Components/RandomUser';
 import RangeParent from './Components/sandbox/RangeParent';
 import Slider from './Components/Slider';
 import { images } from './Components/Slider/SliderData';
@@ -278,7 +279,9 @@ export default class App extends Component{
         <UserCard user={currentUser2} />
         <UserCard user={currentUser3} /> */}     
         {/* <ManagedContest/> */}   
-        <Slider/>
+        {/* <Slider/> */}
+        <RandomUser/>
+
        
          {/* <RangeParent/> */}
 

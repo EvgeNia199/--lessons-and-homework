@@ -7,3 +7,8 @@ export const setStep = (newStep) => ({
     type: ACTION_TYPES.COUNTER_SET_STEP,
     value: newStep,
 });
+
+export const setTheme = (isLigth) => ({
+    type: ACTION_TYPES.SET_THEME,
+    theme: !isLigth
+});
