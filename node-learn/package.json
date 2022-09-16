@@ -17,6 +17,7 @@
   "author": "me",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.19"
   }
