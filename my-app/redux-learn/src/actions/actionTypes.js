@@ -19,6 +19,12 @@ const ACTION_TYPES = {
     //info superhero
     GET_SUPERHERO_LIST: 'GET_SUPERHERO_LIST',
 
+
+    //custom counter
+    CUSTOM_INCR: 'CUSTOM_INCR',
+    CUSTOM_DECR: 'CUSTOM_DECR',
+    CUSTOM_SET_VALUE: 'CUSTOM_SET_VALUE',
+
     
 
 };

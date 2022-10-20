@@ -4,6 +4,7 @@ import axsios from "axios";
 import styles from "./RandomUser.module.scss";
 import BtnGetFamale from "./BtnGetFamale";
 
+
 export default function RandomUser() {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -63,7 +64,8 @@ export default function RandomUser() {
 
   const PhraseGenerator = ({ user }) => {
     const phrases = [
-      `Name ${user.name.first} ${user.name.last}`,
+      `Name ${user.name.first} `,
+      `Last ${user.name.last}`
       `Email addres ${user.email} `,
       `Date of Birth ${user.dob.date.slice(0, 10)} `,
       `Country ${user.location.country} `,

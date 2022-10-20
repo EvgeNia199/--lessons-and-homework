@@ -25,7 +25,6 @@ export default class Card extends Component {
   render() {
     const {user: {name, surname, isSelected}, select} = this.props;
     const selectedStyle = isSelected ? styles.selected : null;
-    //const color = stc(name.concat(surname))
     const color = stc(name+surname);
     const initials = name[0].toUpperCase() + surname[0].toUpperCase();
     const styleDiv = {

@@ -67,3 +67,22 @@ export const getSuperHeroList = () => {
         type: ACTION_TYPES.GET_SUPERHERO_LIST
     }
 }
+
+export const customIncr = () => {
+    return{
+        type: ACTION_TYPES.CUSTOM_INCR
+    }
+}
+
+export const customDecr = () => {
+    return{
+        type: ACTION_TYPES.CUSTOM_DECR
+    }
+}
+
+export const customSetValue = (payload) => {
+    return{
+        type: ACTION_TYPES.CUSTOM_SET_VALUE,
+        payload: payload
+    }
+}

@@ -6,3 +6,15 @@ setInterval(rotateSpinner, 1000 / 50);
 function rotateSpinner (){
     spinner.style.transform = `rotate (${++c}deg)`
 }
+
+
+
+
+
+
+
+
+
+
+
+

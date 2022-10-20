@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { connect } from "react-redux";
-import { getSuperHeroList } from "./../../actions";
+import { getSuperHeroList, customDecr } from "./../../actions";
 
 function ListSuperHeroes(props) {
+  console.log('props11');
   console.log(props);
 
   const { superHeroList } = props;
@@ -16,11 +17,13 @@ function ListSuperHeroes(props) {
     <>
       <div>
         <h1>New SuperHero</h1>
+        <p>VALUEEEEE: {props.value}</p>
+        <button onClick={props.customDecr}>-</button>
         <Formik
           initialValues={{
             Name: "",
             Image: "",
-            superpowers: ""
+            Superpowers: ""
           }}
           onSubmit={async (values) => {
             await new Promise((r) =>
@@ -65,11 +68,16 @@ function ListSuperHeroes(props) {
   );
 }
 
-const mapStateToProps = (state) => state.superHeroReducer;
+const mapStateToProps = (state) => {
+  return {...state.superHeroReducer, ...state.customCounter }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     getSuperHeroList: () => {
       dispatch(getSuperHeroList());
+    },
+    customDecr: () => {
+      dispatch(customDecr());
     },
   };
 };

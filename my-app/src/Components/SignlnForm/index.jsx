@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import styles from './SignInForm.module.css';
+import { PASSWORD_REGEXP } from '../../settings/constants';
+
 // import styles form './SignlnFrom'
 
 export default class SignInForm extends Component {
@@ -7,6 +10,7 @@ export default class SignInForm extends Component {
       this.state = {
         userEmail: '',
         userPassword: '',
+        isPassword: false,
       };
     }
   
@@ -15,18 +19,27 @@ export default class SignInForm extends Component {
  }
 
  setPassword = (e) => {
-    this.setState({userPassword: e.target.value});
- }
+  this.setState({
+    userPassword: e.target.value,
+    isPasswordValid: PASSWORD_REGEXP.test(e.target.value)
+  });
+}
  handleSubmit = (e) => {
     e.preventDefault();
  }
+
+
 render() {
-   
-    const {userEmail, userPassword} = this.state;
+  const {userEmail, userPassword, isPasswordValid} = this.state;
+  const passwordClasses = classNames(styles.input, {
+    [styles.passwordValid]: isPasswordValid,
+    [styles.passwordInvalid]: !isPasswordValid,
+   });
+
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="email" value={userEmail} onChange={this.setEmail} placeholder='email'></input>
-        <input type="password" value={userPassword} onChange={this.setPassword} placeholder='password'></input>
+        <input className={passwordClasses} type="password" value={userPassword} onChange={this.setPassword} placeholder='password'></input>
         <button type="submit">Ok</button>
       </form>
     )
